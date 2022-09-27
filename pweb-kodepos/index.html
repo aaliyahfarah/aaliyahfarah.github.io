@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mencari Kode Pos</title>
+
+    <link rel="stylesheet" href="style.css"/>
+
+    <link rel="icon" type="image/png" href="img/logo.png"/>
+</head>
+<body>
+    <h1>Pencarian Kode Pos</h1>
+    <div class="content">
+        <div class="form-container">
+            <div class="content-container">
+                <label for="search_province">Provinsi: </label>
+                <select name="province" id="province" onchange="displayCity()" placeholder="Masukkan Nama Provinsi"></select>
+            </div>
+            <div class="content-container">
+                <label for="search_city">Kota: </label>
+                <select name="city" id="city" onchange="displayDistrict()"></select> 
+            </div>
+            <div class="content-container">
+                <label for="search_district">Kecamatan: </label>
+                <select name="district" id="district" onchange="displaySubdistrict()"></select>
+            </div>        
+            <div class="content-container">
+                <label for="search_subdistrict">Kelurahan: </label>
+                <select name="subdistrict" id="subdistrict" onchange="displayResult()"></select>
+            </div> 
+            <section class="result-container">
+                <h2>KODE POS</h2>
+                <div id="result"></div>
+            </section> 
+        </div>    
+        
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
