@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image" href="logo.png"/>
+</head>
+<body >
+    <section class="title-container">
+        <h1>FORMULIR REGISTRASI</br></h1>
+    </section>
+    <form class="form-container" id="form" onsubmit="onSubmit()">    
+        <section class="input-container">
+            <h2>PESERTA</h2>
+            <div class="content-container">
+                <label>Nama Lengkap & Gelar : </label>
+                <input type="text" name="nama-peserta" id="nama-peserta" placeholder="Nama Lengkap & Gelar" required></input>
+            </div>
+            <div class="content-container">
+                <label>Asal Instansi / Kota : </label>
+                <input type="text" name="asal" id="asal" placeholder="Asal Instansi / Kota" required></input>
+            </div>
+            <div class="content-container">
+                <label>Alamat : </label>
+                <input type="text" name="alamat" id="alamat" placeholder="Alamat" required></input>
+            </div>
+            
+            <div class="content-container">
+                <label for="search_province">Provinsi : </label>
+                <select name="province" id="province" onchange="displayCity()" placeholder="Masukkan Nama Provinsi"></select>
+            </div>
+            <div class="content-container">
+                <label for="search_city">Kota : </label>
+                <select name="city" id="city" onchange="displayDistrict()"></select> 
+            </div>
+            <div class="content-container">
+                <label for="search_district">Kecamatan : </label>
+                <select name="district" id="district" onchange="displaySubdistrict()"></select>
+            </div>        
+            <div class="content-container">
+                <label for="search_subdistrict">Kelurahan : </label>
+                <select name="subdistrict" id="subdistrict" onchange="displayResult()"></select>
+            </div> 
+            <div class="content-container">
+                <label for="search_kodepos">Kode Pos : </label>
+                <div id="result"></div>
+            </div> 
+
+            <div class="content-container">
+                <label>Telepon / Handphone: </label>
+                <input type="text" name="telepon" id="telepon" placeholder="08xxxxxxxxx" required></input>
+            </div>
+
+            <div class="content-container">
+                <label>Email: </label>
+                <input type="text" name="email" id="email" placeholder="Email" required></input>
+            </div>
+
+            <div class="sponsor-container">
+                <h4>Sponsor</h4>
+                    <div class="sponsor">
+                        <ul>
+                            <li>
+                                <label>Nama Perusahaan: </label>
+                                <input type="text" name="namasp" id="namasp" placeholder="Nama Perusahaan Sponsor" required></input>
+                            </li>
+                            <li>
+                                <label>Alamat Perusahaan: </label>
+                                <input type="text" name="alamatsp" id="alamatsp" placeholder="Alamat Perusahaan Sponsor" required></input>
+                            </li>
+                            <li>
+                                <label>Nama Kontak Personal: </label>
+                                <input type="text" name="namakontaksp" id="namakontaksp" placeholder="Nama Kontak Personal Perusahaan Sponsor" required></input>
+                            </li>
+                            <li>
+                                <label>Telepon Personal: </label>
+                                <input type="text" name="telpsp" id="telpsp" placeholder="Telp. Kontak Personal Perusahaan Sponsor" required></input>
+                            </li>
+                            <li>
+                                <label>Email Personal: </label>
+                                <input type="text" name="emailsp" id="emailsp" placeholder="Email Perusahaan Sponsor" required></input>
+                            </li>
+                        </ul>
+                    </div> 
+                
+            </div> 
+
+            <div class="deskripsi-container">
+                <p> Kontribusi peserta Rp 2.500.000,- (Dua Juta Lima Ratus Ribu Rupiah) belum termasuk penginapan dan akomodasi </br>Konfirmasi Kepesertaan: </p> 
+                <ul>
+                    <li>
+                        Sebelum 15 Januari 2012 : Rp. 2.500.000,-
+                    </li>
+                    <li>
+                        Sesudah 15 Januari 2012 : Rp. 2.750.000,-
+                    </li>
+                    <li>
+                        On Site : Rp. 3.000.000,-
+                    </li>
+                </ul>
+                <p>
+                    Pembatalan Pendaftaran :
+                    <ul>
+                        <li>
+                            Sebelum H-5 uang akan dikembalikan 50%
+                        </li>
+                        <li>
+                            Sesudah H-5 uang tidak dapat dikembalikan
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                    Akomodasi penginapan peserta, harga kamar kelas standar berkisar antara Rp. 250.000,--Rp. 300.000,- </br>
+                </p>
+                <div class="pembayaran-container">
+                    <h4>Pendaftaran via transfer Bank ke :</h4>
+                    <h4>Nama Bank       : Bank BCA KCU Cirebon</h4>
+                    <h4>No. Rekening    : 1341015478</h4>
+                    <h4>Atas nama       : Junaedi, S.kep</h4>
+                </div>
+                <div class="notes-container">
+                    <p>
+                        Bukti transfer mohon dikirim ke alamat Sekretariat Panitia </br>
+                        UPTD Puskesmas Sitopang</br>
+                        Jl. Sekarsari No. 1 Argasurya Harjamukti Kota Cirebon </br>
+                        atau kirim ke email : enterpreneurse41@mail.com </br>
+                        Konfirmasi setelah transfer ke 0818232889
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="submit-button">
+            <input type="submit" id="submit-button"></Input>
+        </section>       
+    </form>
+</body>
+</html>
